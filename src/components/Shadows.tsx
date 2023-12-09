@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ShadowLayer } from './ShadowLayer';
 import { BoxShadowProperties } from '../model';
+import {v4 as uid} from 'uuid';
 
 export const Shadows = () => {
-  const [state, setState] = useState<BoxShadowProperties[]>([]);
+  const [state, setState] = useState<BoxShadowProperties[]>([
+    {
+      id: uid(),
+      horizontalOffset: 0,
+      verticalOffset: 0,
+      blurRadius: 0,
+      spreadRadius: -5,
+      color: 'rgba(0, 0, 0, 0.1)',
+      activeInset: '',
+    },
+  ]);
   return (
     <>
       <h1 className='text-lg font-bold mb-5 text-center'>Box Shadows</h1>
