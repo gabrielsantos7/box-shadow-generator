@@ -11,7 +11,7 @@ function App() {
         </h1>
       </header>
 
-      <div className='grid grid-cols-1 lg:grid-cols-5 gap-4'>
+      <div className='grid grid-cols-1 lg:grid-cols-5 gap-4 lg:h-[calc(100vh-5rem)]'>
         <div className={gridItemsStyles}>
           <Shadows />
         </div>

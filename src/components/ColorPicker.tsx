@@ -14,12 +14,12 @@ const cover: CSSProperties = {
   left: '0px',
 };
 
-interface ColorPickerProps {
+interface IColorPickerProps {
   color: string;
   onChange: (colorRes: any) => void;
 }
 
-export const ColorPicker = ({ color, onChange }: ColorPickerProps) => {
+export const ColorPicker = ({ color, onChange }: IColorPickerProps) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {

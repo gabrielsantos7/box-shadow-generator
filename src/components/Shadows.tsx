@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { ShadowLayer } from './ShadowLayer';
-import { BoxShadowProperties } from '../model';
+import { IBoxShadowProperties } from '../model';
 import {v4 as uid} from 'uuid';
 
 export const Shadows = () => {
-  const [state, setState] = useState<BoxShadowProperties[]>([
+  const [state, setState] = useState<IBoxShadowProperties[]>([
     {
       id: uid(),
       horizontalOffset: 0,
-      verticalOffset: 0,
-      blurRadius: 0,
+      verticalOffset: 5,
+      blurRadius: 10,
       spreadRadius: -5,
       color: 'rgba(0, 0, 0, 0.1)',
       activeInset: '',
