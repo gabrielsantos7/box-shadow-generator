@@ -1,7 +1,5 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ShadowLayer } from './ShadowLayer';
-import { IBoxShadowProps } from '../model';
-import { v4 as uid } from 'uuid';
 import { AppContext } from '../context';
 
 export const Shadows = () => {
