@@ -41,7 +41,7 @@ export function ContextProvider({ children }: IContextProviderProps) {
   const addNewLayer = (): void => {
     setState((prevState) => ({
       ...prevState,
-      boxShadows: [...prevState.boxShadows, { ...defaultBoxShadowProps }],
+      boxShadows: [...prevState.boxShadows, { ...defaultBoxShadowProps, id: uid() }],
     }));
   };
 
