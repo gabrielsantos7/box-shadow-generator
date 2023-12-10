@@ -1,4 +1,4 @@
-import { IBoxShadowProperties } from '../model';
+import { IBoxShadowProps } from '../model';
 import { TrashIcon } from './Icons';
 import { ColorPicker } from './ColorPicker';
 import { ColorResult } from 'react-color';
@@ -8,7 +8,7 @@ import Collapsible from 'react-collapsible';
 
 interface IShadowLayerProps {
   index: number;
-  layer: IBoxShadowProperties;
+  layer: IBoxShadowProps;
 }
 
 export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {

@@ -4,7 +4,8 @@
   interface
 */
 
-export interface IBoxShadowProperties {
+// Represents the properties of a box shadow
+export interface IBoxShadowProps {
   id: string;
   horizontalOffset: number;
   verticalOffset: number;
@@ -12,4 +13,33 @@ export interface IBoxShadowProperties {
   spreadRadius: number;
   color: string;
   activeInset?: '' | 'inset';
+}
+
+// Represents the properties of the container element
+export interface IContainerProps {
+  width: number;
+  height: number;
+  borderRadious: number;
+  backgroundColor: string;
+}
+
+// Represents the properties of a container state, including the box shadow and container properties
+export interface IBoxShadowState {
+  boxShadows: IBoxShadowProps[];
+  containerProps: IContainerProps;
+}
+
+export interface IAppContext {
+  state: IBoxShadowState;
+  addNewLayer: () => void;
+  removeLayer: (id: string) => void;
+  setShadowProperty: (
+    id: string,
+    shadowKey: keyof IBoxShadowProps,
+    value: IBoxShadowProps[keyof IBoxShadowProps],
+  ) => void;
+  setContainerProperty: <K extends keyof IContainerProps>(
+    key: K,
+    value: IContainerProps[K],
+  ) => void;
 }

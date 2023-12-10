@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { ShadowLayer } from './ShadowLayer';
-import { IBoxShadowProperties } from '../model';
+import { IBoxShadowProps } from '../model';
 import {v4 as uid} from 'uuid';
 
 export const Shadows = () => {
-  const [state, setState] = useState<IBoxShadowProperties[]>([
+  const [state, setState] = useState<IBoxShadowProps[]>([
     {
       id: uid(),
       horizontalOffset: 0,
