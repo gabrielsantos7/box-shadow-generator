@@ -14,7 +14,7 @@ const defaultBoxShadowProps: IBoxShadowProps = {
   horizontalOffset: 0,
   verticalOffset: 5,
   blurRadius: 10,
-  spreadRadius: -5,
+  spreadRadius: 0,
   color: 'rgba(0,0,0,0.1)',
   activeInset: '',
 };
@@ -22,7 +22,7 @@ const defaultBoxShadowProps: IBoxShadowProps = {
 const defaultContainerProps: IContainerProps = {
   width: 200,
   height: 200,
-  borderRadious: 0,
+  borderRadius: 0,
   backgroundColor: '#FFFFFF',
 };
 

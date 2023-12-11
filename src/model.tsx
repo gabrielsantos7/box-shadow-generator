@@ -29,6 +29,7 @@ export interface IBoxShadowState {
   containerProps: IContainerProps;
 }
 
+// Represents the context
 export interface IAppContext {
   state: IBoxShadowState;
   addNewLayer: () => void;
