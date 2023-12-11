@@ -36,7 +36,7 @@ export const CSSCode = () => {
 
     setTimeout(() => {
       setCopied(false);
-    }, 2000);
+    }, 1500);
   };
 
   return (

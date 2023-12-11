@@ -41,7 +41,10 @@ export function ContextProvider({ children }: IContextProviderProps) {
   const addNewLayer = (): void => {
     setState((prevState) => ({
       ...prevState,
-      boxShadows: [...prevState.boxShadows, { ...defaultBoxShadowProps, id: uid() }],
+      boxShadows: [
+        ...prevState.boxShadows,
+        { ...defaultBoxShadowProps, id: uid() },
+      ],
     }));
   };
 
@@ -49,7 +52,7 @@ export function ContextProvider({ children }: IContextProviderProps) {
     setState((prevState) => ({
       ...prevState,
       boxShadows: prevState.boxShadows.filter(
-        (shadowLayer) => shadowLayer.id !== prevState.boxShadows[0].id,
+        (shadowLayer) => shadowLayer.id !== id,
       ),
     }));
   };
@@ -62,24 +65,24 @@ export function ContextProvider({ children }: IContextProviderProps) {
     const boxShadows = [...state.boxShadows];
     const index = boxShadows.findIndex((shadowLayer) => shadowLayer.id === id);
 
-    if(index > -1) {
+    if (index > -1) {
       boxShadows[index][shadowKey] = value;
 
-      setState(prevState => ({
+      setState((prevState) => ({
         ...prevState,
-        boxShadows: [...boxShadows]
-      }))
+        boxShadows: [...boxShadows],
+      }));
     }
   };
 
   const setContainerProperty = <K extends keyof IContainerProps>(
     key: K,
-    value: IContainerProps[K]
+    value: IContainerProps[K],
   ): void => {
-    setState(prevState => ({
+    setState((prevState) => ({
       ...prevState,
-      containerProps: {...prevState.containerProps, [key]:value }
-    }))
+      containerProps: { ...prevState.containerProps, [key]: value },
+    }));
   };
 
   return (

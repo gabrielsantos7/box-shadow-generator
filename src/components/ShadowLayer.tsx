@@ -40,62 +40,59 @@ export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {
             <TrashIcon />
           </button>
         </div>
+
         <div className='mt-5'>
           <p className='py-2'>Color</p>
           <ColorPicker color={layer.color} onChange={handleColorChange} />
         </div>
-        <div>
-          <Slider
-            minValue={-200}
-            maxValue={200}
-            value={layer.horizontalOffset}
-            label='Eixo Horizontal'
-            onChange={(e) => handleSliderChange('horizontalOffset', e)}
-          />
 
-          <Slider
-            minValue={-200}
-            maxValue={200}
-            value={layer.verticalOffset}
-            label='Eixo Vertical'
-            onChange={(e) => handleSliderChange('verticalOffset', e)}
-          />
+        <Slider
+          minValue={-200}
+          maxValue={200}
+          value={layer.horizontalOffset}
+          label='Eixo Horizontal'
+          onChange={(e) => handleSliderChange('horizontalOffset', e)}
+        />
 
-          <Slider
-            minValue={0}
-            maxValue={200}
-            value={layer.blurRadius}
-            label='Desfoque'
-            onChange={(e) => handleSliderChange('blurRadius', e)}
-          />
+        <Slider
+          minValue={-200}
+          maxValue={200}
+          value={layer.verticalOffset}
+          label='Eixo Vertical'
+          onChange={(e) => handleSliderChange('verticalOffset', e)}
+        />
 
-          <Slider
-            minValue={0}
-            maxValue={200}
-            value={layer.spreadRadius}
-            label='Propagação'
-            onChange={(e) => handleSliderChange('spreadRadius', e)}
-          />
+        <Slider
+          minValue={0}
+          maxValue={200}
+          value={layer.blurRadius}
+          label='Desfoque'
+          onChange={(e) => handleSliderChange('blurRadius', e)}
+        />
 
-          <div className='flex justify-between items-center space-x-2'>
-            <label htmlFor='check-inset' className='text-gray-700'>
-              Inset
-            </label>
-            <input
-              type='checkbox'
-              onChange={(e) =>
-                setShadowProperty(
-                  layer.id,
-                  'activeInset',
-                  e.target.checked ? 'inset' : '',
-                )
-              }
-              checked={layer.activeInset != null && layer.activeInset !== ''}
-              className='form-checkbox'
-              id='check-inset'
-            />
-          </div>
-        </div>
+        <Slider
+          minValue={0}
+          maxValue={200}
+          value={layer.spreadRadius}
+          label='Propagação'
+          onChange={(e) => handleSliderChange('spreadRadius', e)}
+        />
+
+        <label className='flex justify-between items-center space-x-2'>
+          <span className='text-gray-700'>Inset</span>
+          <input
+            type='checkbox'
+            className='form-checkbox'
+            checked={layer.activeInset != null && layer.activeInset !== ''}
+            onChange={(e) =>
+              setShadowProperty(
+                layer.id,
+                'activeInset',
+                e.target.checked ? 'inset' : '',
+              )
+            }
+          />
+        </label>
       </Collapsible>
     </div>
   );
