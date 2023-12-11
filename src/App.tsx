@@ -22,7 +22,7 @@ function App() {
         <div className={`col-span-2 ${gridItemsStyles}`}>
           <Container />
         </div>
-        <div className={`col-span-2 ${gridItemsStyles}`}>
+        <div className={`col-span-2 bg-slate-100 p-5 h-full`}>
           <ContainerProperties />
           <CSSCode />
         </div>

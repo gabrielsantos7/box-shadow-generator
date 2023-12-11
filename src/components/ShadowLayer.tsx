@@ -28,7 +28,7 @@ export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {
   };
 
   return (
-    <div className='py-5 border-b-2 '>
+    <div className='py-5 border-b-2'>
       <Collapsible trigger={`Camada ${index + 1}`} open={index == 0}>
         <div className='text-right'>
           <button

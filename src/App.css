@@ -1,0 +1,7 @@
+.Collapsible__trigger {
+  background-color: #b6c5e4;
+  display: block;
+  padding: 10px;
+  color: rgb(33, 33, 33);
+  font-weight: 700;
+}
