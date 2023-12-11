@@ -37,6 +37,7 @@ export const ColorPicker = ({ color, onChange }: IColorPickerProps) => {
         style={{ backgroundColor: color }}
         className='w-full rounded-sm border-2 border-gray-400 text-black text-sm'
       >
+        {' '}
         {color}
       </button>
 

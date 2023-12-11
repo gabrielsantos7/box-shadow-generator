@@ -49,7 +49,7 @@ export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {
             minValue={-200}
             maxValue={200}
             value={layer.horizontalOffset}
-            label='Horizontal Length'
+            label='Eixo Horizontal'
             onChange={(e) => handleSliderChange('horizontalOffset', e)}
           />
 
@@ -57,7 +57,7 @@ export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {
             minValue={-200}
             maxValue={200}
             value={layer.verticalOffset}
-            label='Vertical Length'
+            label='Eixo Vertical'
             onChange={(e) => handleSliderChange('verticalOffset', e)}
           />
 
@@ -65,7 +65,7 @@ export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {
             minValue={0}
             maxValue={200}
             value={layer.blurRadius}
-            label='Blur Radius'
+            label='Desfoque'
             onChange={(e) => handleSliderChange('blurRadius', e)}
           />
 
@@ -73,7 +73,7 @@ export const ShadowLayer = ({ index, layer }: IShadowLayerProps) => {
             minValue={0}
             maxValue={200}
             value={layer.spreadRadius}
-            label='Spread Radius'
+            label='Propagação'
             onChange={(e) => handleSliderChange('spreadRadius', e)}
           />
 

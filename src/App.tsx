@@ -1,5 +1,6 @@
 import './App.css';
 import { Container } from './components/Container';
+import { ContainerProperties } from './components/ContainerProperties';
 import { Shadows } from './components/Shadows';
 import { ContextProvider } from './context';
 
@@ -21,7 +22,7 @@ function App() {
           <Container />
         </div>
         <div className={`col-span-2 ${gridItemsStyles}`}>
-          Container props and Code
+          <ContainerProperties />
         </div>
       </div>
     </ContextProvider>

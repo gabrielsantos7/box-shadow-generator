@@ -19,7 +19,7 @@ export interface IBoxShadowProps {
 export interface IContainerProps {
   width: number;
   height: number;
-  borderRadious: number;
+  borderRadius: number;
   backgroundColor: string;
 }
 
